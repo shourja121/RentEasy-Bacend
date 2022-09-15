@@ -310,7 +310,7 @@ module.exports = {
                 console.log(prod);
                 await mongo.products.updateOne({ _id: mongo.ObjectId(user.rentedProducts[i].prod_id) }, { $set: { rentedBy: arr, quantity: prod.quantity, quantityBought: prod.quantityBought, isAvailable: prod.isAvailable } })
             }
-            res.redirect(`https://renteasy121.herokuapp.com/redirect?order_id=${razorpay_order_id}`)
+            res.redirect(`https://renteasy123.netlify.app/redirect?order_id=${razorpay_order_id}`)
 
         }
         catch (e) {
