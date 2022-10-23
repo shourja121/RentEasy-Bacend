@@ -17,7 +17,8 @@ dotenv.config();
         app.listen(process.env.PORT, () => console.log("server running at:", process.env.PORT));
         await mongo.connect();
         app.use(cors({
-            origin: '*'
+            origin: '*',
+            credentials:true
         }))
         app.use(express.json());
         app.use(express.urlencoded({ extended: true }))
