@@ -18,7 +18,7 @@ dotenv.config();
         await mongo.connect();
         app.use(cors({
             origin: '*',
-            credentials:true
+            credentials:false
         }))
         app.use(express.json());
         app.use(express.urlencoded({ extended: true }))
